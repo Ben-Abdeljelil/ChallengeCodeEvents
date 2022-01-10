@@ -1,0 +1,49 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API documentation",
+        "contact": {
+            "email": "benabdeljelilaicha@gmail.com"
+        },
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/events": {
+            "get": {
+                "tags": [
+                    "Code challenge (Events)"
+                ],
+                "summary": "Get events data",
+                "description": "Returns events data",
+                "operationId": "getEvents",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Code challenge (Events)"
+                ],
+                "summary": "Set events data",
+                "description": "Set events data into database",
+                "operationId": "setEvents",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Code challenge (Events)",
+            "description": "API Endpoints of Projects"
+        }
+    ],
+    "security": [
+        []
+    ]
+}
