@@ -15,5 +15,6 @@ use App\Http\Controllers\EventsController;
 */
 
 Route::get('/', [EventsController::class, 'showEventsList']);
-Route::get('/events', [EventsController::class, 'getEvents']);
+Route::get('/events', [EventsController::class, 'getAllEvents']);
+Route::get('/search/events', [EventsController::class, 'searchEvents'])->name('events.search');
 Route::post('/events', [EventsController::class, 'setEvents']);

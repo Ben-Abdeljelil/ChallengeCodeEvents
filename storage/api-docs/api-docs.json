@@ -13,9 +13,9 @@
                 "tags": [
                     "Code challenge (Events)"
                 ],
-                "summary": "Get events data",
-                "description": "Returns events data",
-                "operationId": "getEvents",
+                "summary": "Get all events data",
+                "description": "Returns all events data",
+                "operationId": "getAllEvents",
                 "responses": {
                     "200": {
                         "description": "Successful operation"
@@ -29,6 +29,39 @@
                 "summary": "Set events data",
                 "description": "Set events data into database",
                 "operationId": "setEvents",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation"
+                    }
+                }
+            }
+        },
+        "/search/events": {
+            "get": {
+                "tags": [
+                    "Code challenge (Events)"
+                ],
+                "summary": "Get filtred events",
+                "description": "Returns filtred events data",
+                "operationId": "searchEvents",
+                "parameters": [
+                    {
+                        "name": "employeeName",
+                        "in": "query",
+                        "description": "Employee name"
+                    },
+                    {
+                        "name": "eventName",
+                        "in": "query",
+                        "description": "Event name"
+                    },
+                    {
+                        "name": "eventDate",
+                        "in": "query",
+                        "description": "Event date",
+                        "example": "2019-09-04"
+                    }
+                ],
                 "responses": {
                     "200": {
                         "description": "Successful operation"
